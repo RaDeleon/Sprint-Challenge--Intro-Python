@@ -8,15 +8,13 @@ class GroundVehicle():
         self.num_wheels = num_wheels
 
 
-    def drive():
+    def drive(self):
         return "vroooom"
 
 '''    # TODO
     * Add groundvehicle class 
     * add drive method returning vrooom
     * default num_wheels def=4
-
-    test
 '''
 
 # Subclass Motorcycle from GroundVehicle.
@@ -33,6 +31,14 @@ class GroundVehicle():
 * override drive method return Braap pop pop
 '''
 
+
+class Motorcycle(GroundVehicle):
+    def __init__(self):
+        super().__init__(2)
+
+    def drive(self):
+        return "BRAAAP!!"
+
 vehicles = [
     GroundVehicle(),
     GroundVehicle(),
@@ -43,4 +49,11 @@ vehicles = [
 
 # Go through the vehicles list and print the result of calling drive() on each.
 
-# TODO
+'''
+# * TODO
+# * go thru vehicle list 
+# * run drive on each vehicle and call drive() on it
+'''
+
+for vehicle in vehicles:
+    print(vehicle.drive())
